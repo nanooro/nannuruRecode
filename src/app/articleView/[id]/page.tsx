@@ -11,9 +11,11 @@ import Head from "next/head";
 import Share from "@ui/share";
 
 const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-);
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+)
+
+
 
 export default function articleReader() {
   const [article, setArticle] = useState(null);
